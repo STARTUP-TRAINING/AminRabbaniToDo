@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Amin ToDo</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <br><br>
+            <h1>Amin ToDo</h1>
+            <p>The best ToDo app in the World !!</p>
+        </header>
+        <form class="add-column-form">
+            <input type="text" name="column-name" class="column-name" id="column-name" placeholder="Column Name..." /><br>
+        </form>
+        <main class="top">
+            <div class="columns" id="columns">
+                
+            </div>
+            <div class="add-column" id="add-column">
+                <input type="submit" name="add-column-btn" id="add-column-btn" class="" value="+" />
+            </div>
+        </main>
+        <script src="utilities.js"></script>
+        <script>
+            const state = {
+                columns : []
+            }
+            const elems = {
+                columns: document.getElementById('columns'),
+                columnName: document.getElementById('column-name'),
+                addColumnBtn: document.getElementById('add-column-btn'),
+                addTaskBtn: document.getElementById('add-task-btn'),
+                addTaskForm: document.getElementById('add-task-form'),
+            }
+        </script>
+        <script src="main.js"></script>
+        <script src="render.js"></script>
+    </body>
+</html>
