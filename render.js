@@ -10,6 +10,11 @@ function createMoveBtns(columnId, itemId) {
             buttonElem.setAttribute('onclick', `moveTaskAction('${columnId}', '${column.id}', '${itemId}'); render()`);
             footerElem.appendChild(buttonElem);
         });
+    const buttonElem = document.createElement ('button');
+    buttonElem.innerHTML = 'remove';
+    buttonElem.setAttribute('onclick', `removeTaskAction('${columnId}', '${itemId}'); render()`);
+    buttonElem.classList.add('btn');
+    footerElem.appendChild(buttonElem);
     return footerElem;
 }
 

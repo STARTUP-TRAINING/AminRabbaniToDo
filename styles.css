@@ -15,7 +15,6 @@ header {
 
 main.top {
     display: grid;
-    grid-auto-columns: auto;
     grid-auto-flow: column;
     place-content: start; place-items: start;
     text-align: center;
@@ -23,7 +22,6 @@ main.top {
 
 .columns {
     display: grid;
-    grid-auto-columns: auto;
     grid-auto-flow: column;
     place-items: start;
 }

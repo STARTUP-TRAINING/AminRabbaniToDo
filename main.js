@@ -33,5 +33,9 @@ function moveTaskAction(srcColumnId, destColumnId, taskId) {
     const task = {... selectById(srcColumn.items, taskId)};
     srcColumn.items = srcColumn.items.filter(function(item){ return item.id !== taskId; });
     destColumn.items.push(task);
-    console.log(task);
+}
+
+function removeTaskAction(srcColumnId, taskId) {
+    const srcColumn = selectById(state.columns, srcColumnId);
+    srcColumn.items = srcColumn.items.filter(function(item){ return item.id !== taskId; });
 }
